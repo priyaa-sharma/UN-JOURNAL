@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Where Do We Go From Here?</title>
+  <link rel="stylesheet" href="journal.css" />
+</head>
+<body>
+  <!-- Blurred Daughter Background -->
+  <div class="background"></div>
+
+  <div class="menu-toggle" onclick="toggleMenu()">&#9776;</div>
+  <div class="sidebar" id="sidebar">
+    <a href="index.html">Home</a>
+    <a href="journal.html" class="active">Journal</a>
+    <a href="entries.html">My Entries</a>
+    <a href="affirmations.html">Affirmations</a>
+    <a href="vision.html">Mood Board</a>
+  </div>
+
+  <div class="journal-container">
+    <header class="fade-in">
+      <h2>Where Do We Go From Here?</h2>
+      <p class="date" id="date"></p>
+    </header>
+
+    <section class="mood-container fade-in-delayed">
+      <button class="mood-button" onclick="selectMood('hopeful')">Hopeful</button>
+      <button class="mood-button" onclick="selectMood('anxious')">Anxious</button>
+      <button class="mood-button" onclick="selectMood('nostalgic')">Nostalgic</button>
+      <button class="mood-button" onclick="selectMood('melancholic')">Melancholic</button>
+      <button class="mood-button" onclick="selectMood('freewrite')">Free Write</button>
+    </section>
+
+    <div class="prompt fade-in" id="promptBox">Select a mood to begin writing...</div>
+
+    <textarea placeholder="Start writing here..." class="fade-in-delayed" id="journalEntry"></textarea>
+
+    <div class="button-container fade-in">
+      <button class="past-entries-btn" onclick="window.location.href='entries.html'">
+        <span class="entries-icon">🤍</span> Past Entries
+      </button>
+      <button class="save-btn" onclick="saveEntry()">
+        <span class="save-icon">🤎</span> Save Entry
+      </button>
+    </div>
+  </div>
+
+  <script src="journal.js"></script>
+</body>
+</html>

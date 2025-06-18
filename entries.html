@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Journal Entries</title>
+  <link rel="stylesheet" href="entries.css" />
+</head>
+<body>
+  <!-- Blurred Background -->
+  <div class="background"></div>
+
+  <div class="menu-toggle" onclick="toggleMenu()">&#9776;</div>
+  <div class="sidebar" id="sidebar">
+    <a href="index.html">Home</a>
+    <a href="journal.html">Journal</a>
+    <a href="entries.html" class="active">My Entries</a>
+    <a href="affirmations.html">Affirmations</a>
+    <a href="vision.html">Mood Board</a>
+  </div>
+
+  <div class="entries-container">
+    <header class="entries-header">
+      <h1>My Journal Entries</h1>
+      <button class="new-entry-btn" onclick="window.location.href='journal.html'">
+        <span class="plus-icon">+</span> New Entry
+      </button>
+    </header>
+
+    <div class="entries-grid" id="entriesGrid">
+      <!-- Entries will be dynamically loaded here -->
+    </div>
+
+    <div class="empty-state" id="emptyState" style="display: none;">
+      <div class="empty-icon">🤎</div>
+      <h2>No entries yet</h2>
+      <p>Start your journaling journey by creating your first entry.</p>
+      <button class="new-entry-btn" onclick="window.location.href='journal.html'">
+        <span class="plus-icon">+</span> Create First Entry
+      </button>
+    </div>
+  </div>
+
+  <!-- Entry Detail Modal -->
+  <div class="modal" id="entryModal" style="display: none;">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 id="modalDate"></h2>
+        <span class="close" onclick="closeModal()">&times;</span>
+      </div>
+      <div class="modal-body">
+        <div class="mood-badge" id="modalMood"></div>
+        <div class="prompt-text" id="modalPrompt"></div>
+        <div class="entry-content" id="modalContent"></div>
+        <div class="entry-stats">
+          <span id="modalWordCount"></span> words
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="delete-btn" onclick="deleteEntry()">Delete Entry</button>
+        <button class="close-btn" onclick="closeModal()">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="entries.js"></script>
+</body>
+</html>

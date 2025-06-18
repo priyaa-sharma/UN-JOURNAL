@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Daily Affirmations</title>
+  <link rel="stylesheet" href="affirmations.css" />
+</head>
+<body>
+  <div class="background"></div>
+  
+  <!-- Floating Hearts -->
+  <div class="floating-hearts">
+    <div class="floating-heart">🤎</div>
+    <div class="floating-heart">🤍</div>
+    <div class="floating-heart">🤎</div>
+    <div class="floating-heart">🤍</div>
+    <div class="floating-heart">🤎</div>
+    <div class="floating-heart">🤍</div>
+  </div>
+
+  <div class="menu-toggle" onclick="toggleMenu()">&#9776;</div>
+  <div class="sidebar" id="sidebar">
+    <a href="index.html">Home</a>
+    <a href="journal.html">Journal</a>
+    <a href="entries.html">My Entries</a>
+    <a href="affirmations.html" class="active">Affirmations</a>
+    <a href="vision.html">Mood Board</a>
+  </div>
+
+  <div class="glass-container">
+    <h1 class="title">🤎 Daily Affirmations 🤎</h1>
+    <p class="subtitle">New energy, new words. Your daily dose of affirmations ✨</p>
+    
+    <div class="daily-header">
+      <div class="daily-date" id="currentDate"></div>
+      <div class="daily-message">Today's affirmations are specially chosen for you</div>
+    </div>
+
+    <div class="refresh-container">
+      <button class="refresh-btn" onclick="refreshAffirmations()">
+        🔄 Get New Affirmations
+      </button>
+    </div>
+    
+    <div class="affirmation-columns">
+      <div class="affirmation-column" id="left-column"></div>
+      <div class="affirmation-column" id="right-column"></div>
+    </div>
+  </div>
+
+  <script src="affirmations.js"></script>
+  <script>
+    const leftColumn = document.getElementById("left-column");
+    const rightColumn = document.getElementById("right-column");
+
+    // Set current date
+    function setCurrentDate() {
+      const today = new Date();
+      const options = { 
+        weekday: 'long', 
+        year: 'numeric', 
+        month: 'long', 
+        day: 'numeric' 
+      };
+      document.getElementById('currentDate').textContent = today.toLocaleDateString('en-US', options);
+    }
+
+    // Get daily affirmations based on date
+    function getTodaysAffirmations() {
+      const today = new Date();
+      const dayOfYear = Math.floor((today - new Date(today.getFullYear(), 0, 0)) / 1000 / 60 / 60 / 24);
+      const startIndex = (dayOfYear * 7) % affirmationsData.length;
+      
+      const selectedAffirmations = [];
+      for (let i = 0; i < 10; i++) {
+        selectedAffirmations.push(affirmationsData[(startIndex + i) % affirmationsData.length]);
+      }
+      return selectedAffirmations;
+    }
+
+    // Display affirmations
+    function displayAffirmations(affirmations) {
+      leftColumn.innerHTML = '';
+      rightColumn.innerHTML = '';
+
+      affirmations.forEach((affirmation, index) => {
+        const p = document.createElement("p");
+        p.className = "affirmation";
+        p.textContent = affirmation;
+
+        // Add staggered animation
+        p.style.animationDelay = `${index * 0.1}s`;
+        p.style.animation = 'slideInUp 0.6s ease-out forwards';
+        p.style.opacity = '0';
+
+        if (index < 5) {
+          leftColumn.appendChild(p);
+        } else {
+          rightColumn.appendChild(p);
+        }
+      });
+    }
+
+    // Refresh affirmations
+    function refreshAffirmations() {
+      const randomAffirmations = [];
+      const usedIndices = new Set();
+      
+      while (randomAffirmations.length < 10) {
+        const randomIndex = Math.floor(Math.random() * affirmationsData.length);
+        if (!usedIndices.has(randomIndex)) {
+          usedIndices.add(randomIndex);
+          randomAffirmations.push(affirmationsData[randomIndex]);
+        }
+      }
+      
+      displayAffirmations(randomAffirmations);
+    }
+
+    // Initialize
+    function init() {
+      setCurrentDate();
+      const affirmations = getTodaysAffirmations();
+      displayAffirmations(affirmations);
+    }
+
+    function toggleMenu() {
+      document.getElementById("sidebar").classList.toggle("show");
+    }
+
+    // Start the app
+    init();
+  </script>
+</body>
+</html>

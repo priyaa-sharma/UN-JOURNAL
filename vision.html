@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mood Board</title>
+  <link rel="stylesheet" href="vision.css" />
+</head>
+<body>
+  <!-- Menu Toggle -->
+  <div class="menu-toggle" onclick="toggleMenu()">&#9776;</div>
+  <div class="sidebar" id="sidebar">
+    <a href="index.html">Home</a>
+    <a href="journal.html">Journal</a>
+    <a href="entries.html">My Entries</a>
+    <a href="affirmations.html">Affirmations</a>
+    <a href="vision.html" class="active">Mood Board</a>
+  </div>
+
+  <div class="main-content">
+    <!-- Title -->
+    <h1 class="title">Your Soft Mood Board 🧸</h1>
+    <h2 class="sub-heading">Create beautiful collections of your dreams and inspirations ✨</h2>
+
+    <!-- Enhanced Theme Buttons -->
+    <div class="theme-buttons">
+      <button onclick="selectCategory('inspirational')">✨ Inspirational</button>
+      <button onclick="selectCategory('career')">💼 Career</button>
+      <button onclick="selectCategory('love')">💕 Love</button>
+      <button onclick="selectCategory('travel')">🌍 Travel</button>
+      <button onclick="selectCategory('food')">🍃 Food</button>
+      <button onclick="selectCategory('photography')">📸 Photography</button>
+      <button onclick="selectCategory('music')">🎵 Music</button>
+      <button onclick="selectCategory('wellness')">🧘 Wellness</button>
+      <button onclick="selectCategory('fashion')">👗 Fashion</button>
+      <button onclick="selectCategory('randoms')">🌈 Randoms</button>
+    </div>
+
+    <!-- Enhanced Upload + Quote Input -->
+    <div class="input-area">
+      <input type="file" id="imageUpload" accept="image/*" style="display: none;">
+      <label for="imageUpload" class="custom-upload">💋 Upload Image</label>
+      <textarea id="quoteInput" placeholder="Add your mood text here... (optional)"></textarea>
+      <button onclick="addToBoard()">✨ Add to Board</button>
+    </div>
+
+    <!-- Theme-specific columns -->
+    <div class="board-columns" id="boardColumns"></div>
+  </div>
+
+  <!-- Enhanced Doodles Container -->
+  <div class="doodles">
+    <div class="doodle star">★</div>
+    <div class="doodle heart">♥</div>
+    <div class="doodle sparkle">✦</div>
+    <div class="doodle star">☆</div>
+    <div class="doodle heart">♡</div>
+    <div class="doodle sparkle">✧</div>
+    <div class="doodle lips">💋</div>
+    <div class="doodle moon">🌙</div>
+    <div class="doodle star">✩</div>
+    <div class="doodle lips">💋</div>
+    <div class="doodle moon">🌛</div>
+  </div>
+
+  <script src="vision.js"></script>
+  <script>
+    function toggleMenu() {
+      document.getElementById("sidebar").classList.toggle("active");
+    }
+  </script>
+</body>
+</html>
