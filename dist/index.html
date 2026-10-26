@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Daily Journal</title>
+  <link rel="stylesheet" crossorigin href="/assets/index-uQBxbwY7.css">
+</head>
+
+<body>
+  <div class="background">
+
+    <div class="glass-container" id = "glassbox">
+      <div class="container">
+        <div class="top-content">
+          <h1 class="title">DAILY JOURNAL</h1>
+          <p class="subtitle">A Daily Space For Mindful Reflections</p>
+        </div>
+
+        <div class="bottom-content">
+          <button class="start-button" onclick="startJournal()">Begin My Journal</button>
+          <p class="quote"> - Priya Sharma</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <audio id="hoverSound" src="hover.mp3" preload="auto"></audio>
+  <script src="script.js"></script>
+  <script>
+    function startJournal() {
+      window.location.href = "journal.html";
+    }
+  </script>
+  <script>
+  window.addEventListener("DOMContentLoaded", () => {
+    const glass = document.getElementById("glassbox");
+
+    setTimeout(() => {
+      glass.classList.add("show");
+    }, 300);
+  });
+</script>
+
+</body>
+
+</html>

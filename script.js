@@ -4,10 +4,10 @@ window.addEventListener("load", () => {
   const button = document.querySelector(".start-button");
   const quote = document.querySelector(".quote");
 
-  setTimeout(() => title.classList.add("fade-in"), 100);
-  setTimeout(() => subtitle.classList.add("fade-in"), 400);
-  setTimeout(() => button.classList.add("fade-in"), 700);
-  setTimeout(() => quote.classList.add("fade-in"), 1000);
+  setTimeout(() => title.classList.add("fade-in"), 50);
+  setTimeout(() => subtitle.classList.add("fade-in"), 300);
+  setTimeout(() => button.classList.add("fade-in"), 500);
+  setTimeout(() => quote.classList.add("fade-in"), 700);
 });
 
 const button = document.querySelector(".start-button");

@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
   const boardColumns = document.getElementById("boardColumns");
 
-  // Enhanced drag and drop functionality
+  
   boardColumns.addEventListener("dragstart", function (e) {
     if (e.target.classList.contains("board-item")) {
       e.dataTransfer.setData("text/plain", e.target.id);
@@ -40,7 +40,7 @@ document.addEventListener("DOMContentLoaded", function () {
       dropTarget.appendChild(draggedEl);
       dropTarget.style.background = "rgba(255, 255, 255, 0.5)";
       
-      // Add success animation
+      
       draggedEl.style.animation = "none";
       setTimeout(() => {
         draggedEl.style.animation = "slideInUp 0.5s ease-out";
@@ -48,7 +48,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
-  // Load saved boards on page load
+  
   loadSavedBoards();
 });
 
@@ -58,19 +58,19 @@ const boardColumns = document.getElementById("boardColumns");
 function selectCategory(category) {
   currentCategory = category;
 
-  // Remove previous selection highlight
+  
   document.querySelectorAll(".theme-buttons button").forEach((btn) =>
     btn.classList.remove("selected")
   );
 
-  // Add highlight to the selected one
+  
   const activeBtn = document.querySelector(
     `.theme-buttons button[onclick="selectCategory('${category}')"]`
   );
   if (activeBtn) {
     activeBtn.classList.add("selected");
     
-    // Add selection animation
+    
     activeBtn.style.animation = "none";
     setTimeout(() => {
       activeBtn.style.animation = "pulse 0.6s ease-out";
@@ -82,11 +82,11 @@ function selectCategory(category) {
     column = createNewColumn(category);
     boardColumns.appendChild(column);
     
-    // Add creation animation
+    
     column.style.animation = "slideInUp 0.6s ease-out";
   }
 
-  // Scroll to the selected column
+  
   column.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
 }
 
@@ -95,7 +95,7 @@ function createNewColumn(category) {
   column.className = "board-column";
   column.id = category;
 
-  // Enhanced title with emoji
+  
   const title = document.createElement("h3");
   const categoryEmojis = {
     inspirational: "✨",
@@ -114,7 +114,7 @@ function createNewColumn(category) {
   title.textContent = `${emoji} ${category.charAt(0).toUpperCase() + category.slice(1)}`;
   column.appendChild(title);
 
-  // Enhanced dropdown for delete options
+  
   const deleteWrapper = document.createElement("div");
   deleteWrapper.className = "delete-dropdown";
 
@@ -170,13 +170,13 @@ function createNewColumn(category) {
   deleteWrapper.appendChild(dropdown);
   column.appendChild(deleteWrapper);
 
-  // Toggle dropdown visibility
+  
   deleteBtn.onclick = (e) => {
     e.stopPropagation();
     dropdown.classList.toggle("visible");
   };
 
-  // Close dropdown on click outside
+  
   document.addEventListener("click", () =>
     dropdown.classList.remove("visible")
   );
@@ -206,7 +206,7 @@ function addToBoard() {
   item.draggable = true;
   item.id = "item-" + Date.now();
 
-  // Enhanced delete button
+  
   const deleteBtn = document.createElement("button");
   deleteBtn.textContent = "×";
   deleteBtn.className = "delete-btn";
@@ -223,7 +223,7 @@ function addToBoard() {
   };
   item.appendChild(deleteBtn);
 
-  // Enhanced drag icon
+  
   const dragIcon = document.createElement("div");
   dragIcon.className = "drag-icon";
   dragIcon.textContent = "⋮⋮";
@@ -246,7 +246,7 @@ function addToBoard() {
 
       column.appendChild(item);
       
-      // Add creation animation
+      
       item.style.animation = "slideInUp 0.5s ease-out";
       
       resetInputs();
@@ -259,7 +259,7 @@ function addToBoard() {
     quote.textContent = quoteInput.value;
     item.appendChild(quote);
     
-    // Add emoji for text-only items
+    
     const textIcon = document.createElement("div");
     textIcon.style.fontSize = "2rem";
     textIcon.style.marginBottom = "10px";
@@ -268,7 +268,7 @@ function addToBoard() {
     
     column.appendChild(item);
     
-    // Add creation animation
+    
     item.style.animation = "slideInUp 0.5s ease-out";
     
     resetInputs();
@@ -282,7 +282,7 @@ function resetInputs() {
   document.getElementById("quoteInput").value = "";
 }
 
-// Enhanced notification system
+
 function showNotification(message, type = "info") {
   const notification = document.createElement("div");
   notification.style.cssText = `
@@ -317,7 +317,7 @@ function showNotification(message, type = "info") {
   }, 3000);
 }
 
-// Local storage functionality
+
 function saveBoardsToStorage() {
   const boards = {};
   document.querySelectorAll('.board-column').forEach(column => {
@@ -399,7 +399,7 @@ function loadSavedBoards() {
   });
 }
 
-// Export functionality
+
 function exportBoardAsJSON(category) {
   const column = document.getElementById(category);
   if (!column) return;
@@ -433,7 +433,7 @@ function exportBoardAsJSON(category) {
   showNotification(`${category} board exported! 📤`, "success");
 }
 
-// Add CSS animations
+
 const style = document.createElement('style');
 style.textContent = `
   @keyframes slideInUp {

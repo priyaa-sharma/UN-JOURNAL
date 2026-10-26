@@ -13,18 +13,17 @@ body, html {
 }
 
 .background {
-  background: url("https://i.postimg.cc/qq4Dkc8t/Rectangle-1.png") no-repeat center center/cover;
+  background: url("https://i.postimg.cc/76ZrN2Ns/image.png") no-repeat center center/cover;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  filter: blur(12px) brightness(0.6) contrast(1.1);
+  filter: blur(2px) brightness(0.85) contrast(1.1);
   z-index: -1;
   animation: slowPulse 8s ease-in-out infinite alternate;
 }
 
-/* Menu Toggle - Consistent Design */
 .menu-toggle {
   position: fixed;
   top: 20px;
@@ -33,10 +32,10 @@ body, html {
   font-family: "Roboto Mono", monospace;
   font-weight: 600;
   padding: 12px 16px;
-  background: rgba(230, 211, 179, 0.9);
-  color: #3e2f23;
+  background: rgba(185, 176, 22, 0.42);
+  color: #6b650b;
   border-radius: 12px;
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(3px);
   cursor: pointer;
   z-index: 1001;
   transition: all 0.3s ease;
@@ -45,21 +44,21 @@ body, html {
 }
 
 .menu-toggle:hover {
-  background: rgba(192, 168, 138, 0.95);
-  color: #fff;
+  background: rgba(185, 176, 22, 0.5);
+  color: #6b650b;
   transform: translateY(-2px);
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
 }
 
-/* Sidebar - Consistent Design */
+
 .sidebar {
   position: fixed;
   top: 0;
   left: -280px;
   width: 280px;
   height: 100vh;
-  background: linear-gradient(135deg, rgba(230, 211, 179, 0.95), rgba(192, 168, 138, 0.95));
-  backdrop-filter: blur(15px);
+  background: linear-gradient(135deg, rgba(185, 176, 22, 0.7), rgba(185, 176, 22, 0.55));
+  backdrop-filter: blur(4px);
   padding-top: 70px;
   transition: left 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   z-index: 1000;
@@ -77,7 +76,7 @@ body, html {
   font-size: 1.1rem;
   font-family: "Roboto Mono", monospace;
   font-weight: 500;
-  color: #3e2f23;
+  color: #6b650b;
   text-decoration: none;
   transition: all 0.3s ease;
   border-left: 4px solid transparent;
@@ -85,43 +84,25 @@ body, html {
 }
 
 .sidebar a:hover {
-  background-color: rgba(212, 177, 140, 0.8);
-  color: white;
-  border-left: 4px solid #8d674e;
+  background-color: rgba(185, 176, 22, 0.5);
+  color: #6b650b;
+  border-left: 4px solid #b9b016;
   transform: translateX(5px);
 }
 
 .sidebar a.active {
-  background-color: rgba(141, 103, 78, 0.2);
-  color: #8d674e;
-  border-left: 4px solid #8d674e;
+  background-color: rgba(185, 176, 22, 0.2);
+  color: #6b650b;
+  border-left: 4px solid #b9b016;
   font-weight: 600;
 }
 
-/* Glass Container */
-.glass-container {
-  position: absolute;
-  top: 3vh;
-  bottom: 3vh;
-  left: 3vw;
-  right: 3vw;
-  background: rgba(255, 255, 255, 0.12);
-  backdrop-filter: blur(20px);
-  border-radius: 20px;
-  padding: 50px 60px;
-  display: flex;
-  flex-direction: column;
-  color: #2c1810;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-  animation: slideInUp 1s ease-out;
-}
 
 .title {
   font-size: clamp(2.2rem, 4vw, 3.2rem);
   font-weight: 700;
   text-align: center;
-  color: #2c1810;
+  color: #6b650b;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
   margin-bottom: 15px;
   letter-spacing: 1px;
@@ -132,18 +113,18 @@ body, html {
   font-family: "Roboto Mono", monospace;
   text-align: center;
   margin: 0 0 40px 0;
-  color: #4a3429;
+  color: #6b650b;
   font-weight: 500;
   opacity: 0.9;
   letter-spacing: 0.5px;
 }
 
-/* Daily Affirmations Header */
+
 .daily-header {
   text-align: center;
   margin-bottom: 30px;
   padding: 25px;
-  background: rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.06);
   border-radius: 16px;
   border: 1px solid rgba(255, 255, 255, 0.2);
 }
@@ -151,27 +132,27 @@ body, html {
 .daily-date {
   font-family: "Roboto Mono", monospace;
   font-size: 1.1rem;
-  color: #5a4136;
+  color: #6b650b;
   font-weight: 500;
   margin-bottom: 8px;
 }
 
 .daily-message {
   font-style: italic;
-  color: #4a3429;
+  color: #6b650b;
   font-size: 1rem;
   opacity: 0.8;
 }
 
-/* Refresh Button */
+
 .refresh-container {
   text-align: center;
   margin-bottom: 25px;
 }
 
 .refresh-btn {
-  background: linear-gradient(135deg, #8d674e, #a77e5d);
-  color: white;
+  background: #b9b016;
+  color: #6b650b;
   border: none;
   padding: 12px 24px;
   border-radius: 50px;
@@ -180,17 +161,17 @@ body, html {
   font-size: 0.95rem;
   font-weight: 500;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 15px rgba(141, 103, 78, 0.3);
+  box-shadow: 0 4px 15px rgba(185, 176, 22, 0.3);
   letter-spacing: 0.5px;
 }
 
 .refresh-btn:hover {
-  background: linear-gradient(135deg, #6f4b36, #8d674e);
+  background: #b9b016;
   transform: translateY(-2px) scale(1.05);
-  box-shadow: 0 6px 20px rgba(141, 103, 78, 0.4);
+  box-shadow: 0 6px 20px rgba(185, 176, 22, 0.4);
 }
 
-/* Affirmation Columns */
+
 .affirmation-columns {
   display: flex;
   gap: 40px;
@@ -205,35 +186,35 @@ body, html {
   flex-direction: column;
   gap: 20px;
   padding: 25px;
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.06);
   border-radius: 16px;
   border: 1px solid rgba(255, 255, 255, 0.15);
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(4px);
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
 }
 
 .affirmation {
   font-size: 1.15rem;
   font-style: italic;
-  color: #2c1810;
+  color: #6b650b;
   line-height: 1.6;
   padding: 20px;
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.08);
   border-radius: 12px;
-  border-left: 4px solid rgba(141, 103, 78, 0.6);
+  border-left: 4px solid rgba(185, 176, 22, 0.6);
   transition: all 0.3s ease;
   font-weight: 500;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
 }
 
 .affirmation:hover {
-  background: rgba(255, 255, 255, 0.25);
+  background: rgba(255, 255, 255, 0.12);
   transform: translateX(5px);
-  border-left-color: rgba(141, 103, 78, 0.8);
+  border-left-color: rgba(185, 176, 22, 0.8);
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
 }
 
-/* Floating Elements */
+
 .floating-hearts {
   position: absolute;
   top: 0;
@@ -248,7 +229,7 @@ body, html {
 .floating-heart {
   position: absolute;
   font-size: 20px;
-  color: rgba(141, 103, 78, 0.3);
+  color: rgba(107, 101, 11, 0.3);
   animation: float 8s ease-in-out infinite;
   user-select: none;
 }
@@ -260,10 +241,10 @@ body, html {
 .floating-heart:nth-child(5) { top: 50%; left: 8%; animation-delay: 1s; }
 .floating-heart:nth-child(6) { top: 70%; right: 5%; animation-delay: 3s; }
 
-/* Animations */
+
 @keyframes slowPulse {
-  0% { filter: blur(12px) brightness(0.6) contrast(1.1); }
-  100% { filter: blur(15px) brightness(0.7) contrast(1.2); }
+  0% { filter: blur(2px) brightness(0.85) contrast(1.1); }
+  100% { filter: blur(4px) brightness(0.9) contrast(1.2); }
 }
 
 @keyframes slideInUp {
@@ -288,26 +269,26 @@ body, html {
   }
 }
 
-/* Custom Scrollbar */
+
 .affirmation-columns::-webkit-scrollbar {
   width: 8px;
 }
 
 .affirmation-columns::-webkit-scrollbar-track {
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.04);
   border-radius: 4px;
 }
 
 .affirmation-columns::-webkit-scrollbar-thumb {
-  background: rgba(141, 103, 78, 0.5);
+  background: rgba(185, 176, 22, 0.5);
   border-radius: 4px;
 }
 
 .affirmation-columns::-webkit-scrollbar-thumb:hover {
-  background: rgba(141, 103, 78, 0.7);
+  background: rgba(185, 176, 22, 0.7);
 }
 
-/* Responsive Design */
+
 @media (max-width: 768px) {
   .glass-container {
     padding: 30px 25px;

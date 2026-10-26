@@ -7,7 +7,6 @@
   <link rel="stylesheet" href="vision.css" />
 </head>
 <body>
-  <!-- Menu Toggle -->
   <div class="menu-toggle" onclick="toggleMenu()">&#9776;</div>
   <div class="sidebar" id="sidebar">
     <a href="index.html">Home</a>
@@ -18,11 +17,8 @@
   </div>
 
   <div class="main-content">
-    <!-- Title -->
-    <h1 class="title">Your Soft Mood Board 🧸</h1>
+    <h1 class="title">Mood Board🧸</h1>
     <h2 class="sub-heading">Create beautiful collections of your dreams and inspirations ✨</h2>
-
-    <!-- Enhanced Theme Buttons -->
     <div class="theme-buttons">
       <button onclick="selectCategory('inspirational')">✨ Inspirational</button>
       <button onclick="selectCategory('career')">💼 Career</button>
@@ -36,7 +32,6 @@
       <button onclick="selectCategory('randoms')">🌈 Randoms</button>
     </div>
 
-    <!-- Enhanced Upload + Quote Input -->
     <div class="input-area">
       <input type="file" id="imageUpload" accept="image/*" style="display: none;">
       <label for="imageUpload" class="custom-upload">💋 Upload Image</label>
@@ -44,11 +39,9 @@
       <button onclick="addToBoard()">✨ Add to Board</button>
     </div>
 
-    <!-- Theme-specific columns -->
     <div class="board-columns" id="boardColumns"></div>
   </div>
 
-  <!-- Enhanced Doodles Container -->
   <div class="doodles">
     <div class="doodle star">★</div>
     <div class="doodle heart">♥</div>

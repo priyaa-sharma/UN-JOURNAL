@@ -8,15 +8,15 @@
 
 body {
   font-family: "EB Garamond", serif;
-  background: linear-gradient(135deg, #f5e6d3, #e8d5c4, #dbc4a2);
-  color: #4e342e;
+  background: linear-gradient(135deg, #b9b1163b, #c7be14b3, #b9af1f);
+  color: #6b650b;
   overflow-x: hidden;
   padding: 40px;
   min-height: 100vh;
-  position: relative;
+  position: relative; 
 }
 
-/* Menu Toggle - Consistent Design */
+
 .menu-toggle {
   position: fixed;
   top: 20px;
@@ -25,7 +25,7 @@ body {
   font-family: "Roboto Mono", monospace;
   font-weight: 600;
   padding: 12px 16px;
-  background: rgba(230, 211, 179, 0.9);
+  background: rgba(185, 176, 22, 0.45);
   color: #3e2f23;
   border-radius: 12px;
   backdrop-filter: blur(10px);
@@ -37,21 +37,21 @@ body {
 }
 
 .menu-toggle:hover {
-  background: rgba(192, 168, 138, 0.95);
+  background: rgba(185, 176, 22, 0.45);
   color: #fff;
   transform: translateY(-2px);
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
 }
 
-/* Sidebar - Consistent Design */
+
 .sidebar {
   position: fixed;
   top: 0;
   left: -280px;
   width: 280px;
   height: 100vh;
-  background: linear-gradient(135deg, rgba(230, 211, 179, 0.95), rgba(192, 168, 138, 0.95));
-  backdrop-filter: blur(15px);
+  background: linear-gradient(135deg, rgba(185, 176, 22, 0.7), rgba(185, 176, 22, 0.55));
+  backdrop-filter: blur(4px);
   padding-top: 70px;
   transition: left 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   z-index: 1000;
@@ -69,7 +69,7 @@ body {
   font-size: 1.1rem;
   font-family: "Roboto Mono", monospace;
   font-weight: 500;
-  color: #3e2f23;
+  color: #6b650b;
   text-decoration: none;
   transition: all 0.3s ease;
   border-left: 4px solid transparent;
@@ -77,20 +77,20 @@ body {
 }
 
 .sidebar a:hover {
-  background-color: rgba(212, 177, 140, 0.8);
-  color: white;
-  border-left: 4px solid #8d674e;
+  background-color: rgba(185, 176, 22, 0.5);
+  color: #6b650b;
+  border-left: 4px solid #b9b016;
   transform: translateX(5px);
 }
 
 .sidebar a.active {
-  background-color: rgba(141, 103, 78, 0.2);
-  color: #8d674e;
-  border-left: 4px solid #8d674e;
+  background-color: rgba(185, 176, 22, 0.2);
+  color: #6b650b;
+  border-left: 4px solid #b9b016;
   font-weight: 600;
 }
 
-/* Main Content */
+
 .main-content {
   max-width: 1400px;
   margin: 0 auto;
@@ -102,7 +102,7 @@ body {
   font-size: clamp(2.2rem, 4vw, 3rem);
   font-weight: 700;
   margin: 40px auto 15px;
-  color: #4e342e;
+  color: #494504;
   font-family: 'EB Garamond', serif;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
   letter-spacing: 1px;
@@ -111,16 +111,16 @@ body {
 .sub-heading {
   font-family: "Roboto Mono", monospace;
   text-align: center;
-  font-size: clamp(1rem, 2vw, 1.2rem);
-  color: #8b6f47;
+  font-size: clamp(1rem, 1vw, 1.2rem);
+  color: #302d06;
   margin-top: -10px;
   margin-bottom: 40px;
-  font-weight: 500;
-  letter-spacing: 0.5px;
+  font-weight: 400;
+  letter-spacing: 0.2px;
   opacity: 0.9;
 }
 
-/* Enhanced Theme Buttons */
+
 .theme-buttons {
   display: flex;
   flex-wrap: wrap;
@@ -128,16 +128,16 @@ body {
   justify-content: center;
   margin-bottom: 40px;
   padding: 30px;
-  background: rgba(255, 255, 255, 0.4);
+  background: rgba(255, 255, 255, 0.06);
   border-radius: 20px;
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(4px);
   border: 1px solid rgba(255, 255, 255, 0.3);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
 .theme-buttons button {
-  background: linear-gradient(135deg, #8d674e, #a77e5d);
-  color: #fff;
+  background: rgba(181, 172, 19, 0.45);
+  color: #3f3c05;
   padding: 14px 24px;
   font-size: 1rem;
   border: none;
@@ -168,20 +168,19 @@ body {
 }
 
 .theme-buttons button:hover {
-  background: linear-gradient(135deg, #6f4b36, #8d674e);
+  background: rgba(188, 179, 14, 0.45);
   transform: translateY(-3px) scale(1.05);
   box-shadow: 0 8px 25px rgba(141, 103, 78, 0.4);
 }
 
 .theme-buttons button.selected {
-  background: linear-gradient(135deg, #5a3a28, #6f4b36);
-  color: #fff;
+  background: rgba(185, 176, 22, 0.45);
+  color: #4c4905;
   transform: scale(1.08);
-  box-shadow: 0 8px 30px rgba(90, 58, 40, 0.5);
   font-weight: 600;
 }
 
-/* Enhanced Input Area */
+
 .input-area {
   display: flex;
   gap: 20px;
@@ -190,9 +189,9 @@ body {
   margin-bottom: 50px;
   align-items: center;
   padding: 30px;
-  background: rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.05);
   border-radius: 20px;
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(4px);
   border: 1px solid rgba(255, 255, 255, 0.3);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
@@ -202,62 +201,62 @@ body {
 }
 
 .custom-upload {
-  background: linear-gradient(135deg, #8d674e, #a77e5d);
-  color: #fff;
+  background: rgba(207, 197, 12, 0.707);
+  color: #666309;
   padding: 14px 24px;
   font-size: 1rem;
   border-radius: 50px;
   cursor: pointer;
   font-family: "Roboto Mono", monospace;
   font-weight: 500;
-  box-shadow: 0 4px 15px rgba(141, 103, 78, 0.3);
+  
   transition: all 0.3s ease;
   letter-spacing: 0.5px;
 }
 
 .custom-upload:hover {
-  background: linear-gradient(135deg, #6f4b36, #8d674e);
+  background: rgba(185, 176, 22, 0.45);
   transform: translateY(-2px) scale(1.05);
-  box-shadow: 0 6px 20px rgba(141, 103, 78, 0.4);
+  box-shadow: 0 6px 20px rgba(141, 103, 78, );
 }
 
 textarea {
-  background: rgba(255, 255, 255, 0.8);
-  border: 2px solid rgba(141, 103, 78, 0.3);
+  background: rgba(255, 255, 255, 0.08);
+  border: 2px solid rgba(185, 176, 22, 0.3);
   border-radius: 16px;
   padding: 15px;
   font-family: "EB Garamond", serif;
   font-size: 1rem;
-  color: #4e342e;
+  color: #6b650b;
   outline: none;
   width: 280px;
   height: 120px;
   resize: vertical;
-  backdrop-filter: blur(5px);
+  backdrop-filter: blur(3px);
   transition: all 0.3s ease;
   font-weight: 500;
 }
 
 textarea:focus {
-  border-color: rgba(141, 103, 78, 0.6);
-  box-shadow: 0 0 15px rgba(141, 103, 78, 0.3);
-  background: rgba(255, 255, 255, 0.9);
+  border-color: rgba(185, 176, 22, 0.6);
+  box-shadow: 0 0 15px rgba(185, 176, 22, 0.3);
+  background: rgba(255, 255, 255, 0.12);
   transform: scale(1.02);
 }
 
 textarea::placeholder {
   font-style: italic;
-  color: rgba(141, 103, 78, 0.6);
+  color: rgba(107, 101, 11, 0.75);
   font-weight: 400;
 }
 
 .input-area button {
-  background: linear-gradient(135deg, #fff, #f8f8f8);
-  color: #8d674e;
+  background: rgba(193, 183, 11, 0.45);
+  color: #565207;
   font-weight: 600;
   padding: 14px 28px;
   border-radius: 50px;
-  border: 2px solid #8d674e;
+  border: 2px solid #a8a00c;
   cursor: pointer;
   font-family: "Roboto Mono", monospace;
   font-size: 1rem;
@@ -267,13 +266,13 @@ textarea::placeholder {
 }
 
 .input-area button:hover {
-  background: linear-gradient(135deg, #8d674e, #a77e5d);
+  background: rgba(185, 176, 22, 0.45);
   color: #fff;
   transform: translateY(-2px) scale(1.05);
   box-shadow: 0 6px 20px rgba(141, 103, 78, 0.4);
 }
 
-/* Enhanced Board Columns */
+
 .board-columns {
   display: flex;
   flex-wrap: wrap;
@@ -284,8 +283,8 @@ textarea::placeholder {
 .board-column {
   flex: 1 1 320px;
   min-height: 400px;
-  background: rgba(255, 255, 255, 0.5);
-  backdrop-filter: blur(15px);
+  background: rgba(230, 241, 78, 0.696);
+  backdrop-filter: blur(6px);
   border-radius: 20px;
   padding: 25px;
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
@@ -304,17 +303,17 @@ textarea::placeholder {
   font-weight: 600;
   margin-bottom: 20px;
   text-align: center;
-  color: #4e342e;
+  color: #6b650b;
   text-transform: capitalize;
   letter-spacing: 0.5px;
   padding-bottom: 15px;
-  border-bottom: 2px solid rgba(141, 103, 78, 0.3);
+  border-bottom: 2px solid rgba(185, 176, 22, 0.3);
 }
 
-/* Enhanced Board Items */
+
 .board-item {
-  background: rgba(255, 255, 255, 0.9);
-  border: 2px dashed rgba(141, 103, 78, 0.4);
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px dashed rgba(185, 176, 22, 0.4);
   border-radius: 16px;
   padding: 15px;
   margin-bottom: 18px;
@@ -324,14 +323,14 @@ textarea::placeholder {
   max-width: 160px;
   text-align: center;
   position: relative;
-  backdrop-filter: blur(5px);
+  backdrop-filter: blur(3px);
 }
 
 .board-item:hover {
   transform: translateY(-5px) scale(1.03);
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
-  border-color: rgba(141, 103, 78, 0.6);
-  background: rgba(255, 255, 255, 0.95);
+  border-color: rgba(185, 176, 22, 0.6);
+  background: rgba(255, 255, 255, 0.15);
 }
 
 .board-item:active {
@@ -358,7 +357,7 @@ textarea::placeholder {
 .board-item p {
   font-style: italic;
   font-size: 1rem;
-  color: #5a3e36;
+  color: #6b650b;
   word-wrap: break-word;
   overflow-wrap: break-word;
   line-height: 1.4;
@@ -367,24 +366,24 @@ textarea::placeholder {
 
 .drag-icon {
   font-size: 1.3rem;
-  color: rgba(141, 103, 78, 0.6);
+  color: rgba(107, 101, 11, 0.6);
   margin-bottom: 10px;
   cursor: move;
   transition: all 0.3s ease;
 }
 
 .board-item:hover .drag-icon {
-  color: rgba(141, 103, 78, 0.8);
+  color: rgba(107, 101, 11, 0.8);
   transform: scale(1.1);
 }
 
-/* Enhanced Delete Button */
+
 .delete-btn {
   position: absolute;
   top: 8px;
   right: 8px;
   font-size: 1.1rem;
-  background: linear-gradient(135deg, #d32f2f, #b71c1c);
+  background: rgba(185, 176, 22, 0.45);
   color: #fff;
   border: none;
   border-radius: 50%;
@@ -400,12 +399,12 @@ textarea::placeholder {
 }
 
 .delete-btn:hover {
-  background: linear-gradient(135deg, #b71c1c, #8d1414);
+  background: rgba(185, 176, 22, 0.45);
   transform: scale(1.1);
   box-shadow: 0 4px 12px rgba(211, 47, 47, 0.4);
 }
 
-/* Enhanced Delete Dropdown */
+
 .delete-dropdown {
   position: absolute;
   top: 15px;
@@ -417,15 +416,15 @@ textarea::placeholder {
   border: none;
   font-size: 1.3rem;
   cursor: pointer;
-  color: rgba(141, 103, 78, 0.7);
+  color: rgba(107, 101, 11, 0.7);
   padding: 8px;
   border-radius: 50%;
   transition: all 0.3s ease;
 }
 
 .delete-all-icon:hover {
-  background: rgba(141, 103, 78, 0.1);
-  color: rgba(141, 103, 78, 1);
+  background: rgba(185, 176, 22, 0.1);
+  color: #6b650b;
   transform: scale(1.1);
 }
 
@@ -433,15 +432,15 @@ textarea::placeholder {
   position: absolute;
   top: 40px;
   right: 0;
-  background: rgba(255, 255, 255, 0.95);
-  border: 1px solid rgba(141, 103, 78, 0.3);
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(185, 176, 22, 0.3);
   border-radius: 12px;
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
   padding: 10px 0;
   display: none;
   z-index: 10;
   min-width: 180px;
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(4px);
 }
 
 .delete-menu.visible {
@@ -454,17 +453,17 @@ textarea::placeholder {
   cursor: pointer;
   font-family: "Roboto Mono", monospace;
   font-size: 0.95rem;
-  color: #4e342e;
+  color: #6b650b;
   transition: all 0.2s ease;
   font-weight: 500;
 }
 
 .delete-menu div:hover {
-  background: rgba(141, 103, 78, 0.1);
-  color: #8d674e;
+  background: rgba(185, 176, 22, 0.1);
+  color: #6b650b;
 }
 
-/* Floating Doodles */
+
 .doodles {
   position: fixed;
   top: 0;
@@ -486,11 +485,11 @@ textarea::placeholder {
   transition: all 0.3s ease;
 }
 
-.doodle.star { color: #f9c5d1; }
-.doodle.heart { color: #8d674e; }
-.doodle.sparkle { color: #f6d1c1; }
-.doodle.lips { color: #d85c7a; }
-.doodle.moon { color: #a67b5b; }
+.doodle.star { color: #6b650b; }
+.doodle.heart { color: #6b650b; }
+.doodle.sparkle { color: #6b650b; }
+.doodle.lips { color: #6b650b; }
+.doodle.moon { color: #6b650b; }
 
 .doodle.star:nth-child(1) { top: 10%; left: 5%; animation-delay: 0s; }
 .doodle.heart:nth-child(2) { top: 80%; left: 15%; animation-delay: 1.5s; }
@@ -504,7 +503,7 @@ textarea::placeholder {
 .doodle.lips:nth-child(10) { bottom: 10%; right: 30%; animation-delay: 5.5s; font-size: 30px; }
 .doodle.moon:nth-child(11) { bottom: 35%; left: 45%; animation-delay: 2.5s; font-size: 25px; }
 
-/* Animations */
+
 @keyframes floatUpDown {
   0%, 100% { 
     transform: translateY(0) rotate(0deg); 
@@ -538,7 +537,7 @@ textarea::placeholder {
   }
 }
 
-/* Responsive Design */
+
 @media screen and (max-width: 900px) {
   body {
     padding: 20px;

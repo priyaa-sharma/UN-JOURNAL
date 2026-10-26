@@ -13,44 +13,44 @@ body, html {
 }
 
 .background {
-  background: url("https://i.postimg.cc/qq4Dkc8t/Rectangle-1.png") no-repeat center center/cover;
+  background: url("https://i.postimg.cc/76ZrN2Ns/image.png") no-repeat center center/cover;
   height: 100vh;
   width: 100vw;
   position: relative;
-  filter: brightness(0.8) contrast(1.1);
+  filter: brightness(0.9) contrast(1.1);
 }
 
-/* Glass Effect */
+
 .glass-container {
   position: absolute;
   top: 2vh;
   left: 2vw;
   right: 2vw;
   bottom: 2vh;
-  background: rgba(255, 255, 255, 0.12);
-  backdrop-filter: blur(15px);
-  -webkit-backdrop-filter: blur(15px);
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(0px);
+  -webkit-backdrop-filter: blur(0px);
   border-radius: 24px;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.18);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   padding: 60px 40px;
 
-  /* Initial hidden state */
+ 
   opacity: 0;
   transform: translateY(30px) scale(0.98);
   transition: all 2s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* After animation trigger */
+
 .glass-container.show {
   opacity: 1;
   transform: translateY(0) scale(1);
 }
 
-/* Content Box */
+
 .container {
   height: 100%;
   width: 100%;
@@ -71,37 +71,38 @@ body, html {
   animation: fadeInUp 1.5s ease-out 1s both;
 }
 
-/* Text Styling */
+
 .title {
   font-size: clamp(2.5rem, 5vw, 4rem);
   font-weight: 700;
   letter-spacing: 4px;
-  color: #2c1810;
+  color: #dbd702;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
   margin-bottom: 10px;
 }
 
 .subtitle {
   font-family: "Roboto Mono", monospace;
-  font-size: clamp(1rem, 2vw, 1.3rem);
-  color: #382014;
+  font-style: italic;
+  font-size: clamp(1rem, 1vw, 1.3rem);
+  color: #7b7507;
   font-weight: 400;
   letter-spacing: 1px;
   opacity: 0.9;
 }
 
-/* Brown Button */
+
 .start-button {
   font-size: 1.2rem;
   padding: 18px 40px;
   border: none;
   border-radius: 50px;
-  background: linear-gradient(135deg, #8d674e, #a77e5d, #c9b09c);
-  color: #fff;
+  background: linear-gradient(135deg, #c4b425, #b9b016, #b9b00b);
+  color: #5a5610;
   font-weight: 600;
   letter-spacing: 1.5px;
   cursor: pointer;
-  box-shadow: 0 8px 25px rgba(141, 103, 78, 0.4);
+  box-shadow: 0 8px 25px rgba(206, 227, 13, 0.4);
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   font-family: "EB Garamond", serif;
   position: relative;
@@ -125,19 +126,19 @@ body, html {
 
 .start-button:hover {
   transform: translateY(-3px) scale(1.05);
-  box-shadow: 0 12px 35px rgba(141, 103, 78, 0.5);
-  background: linear-gradient(135deg, #6f4b36, #8d674e, #a77e5d);
+  box-shadow: 0 12px 35px rgba(207, 201, 9, 0.793);
+  background: linear-gradient(135deg, #b9b016, #b9b016, #b9b016);
 }
 
 .start-button:active {
   transform: translateY(-1px) scale(1.02);
 }
 
-/* Quote */
+
 .quote {
   font-style: italic;
   font-size: clamp(0.9rem, 1.5vw, 1.1rem);
-  color: #000000;
+  color: #948e1c;
   opacity: 0.8;
   margin-top: 15px;
   transition: all 0.3s ease;
@@ -149,7 +150,7 @@ body, html {
   color: #4a3429;
 }
 
-/* Animations */
+
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -161,7 +162,7 @@ body, html {
   }
 }
 
-/* Responsive Design */
+
 @media (max-width: 768px) {
   .glass-container {
     padding: 40px 20px;

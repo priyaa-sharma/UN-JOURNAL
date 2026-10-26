@@ -79,7 +79,7 @@ const prompts = {
 let currentMood = '';
 let currentPrompt = '';
 
-// Set current date
+
 document.addEventListener('DOMContentLoaded', function() {
   const dateElement = document.getElementById('date');
   const today = new Date();
@@ -103,12 +103,12 @@ function selectMood(mood) {
 
   currentMood = mood;
 
-  // Remove active class from all mood buttons
+  
   document.querySelectorAll('.mood-button').forEach(btn => {
     btn.classList.remove('active');
   });
 
-  // Add active class to selected mood button
+  
   event.target.classList.add('active');
 
   if (mood === 'freewrite') {
@@ -125,7 +125,7 @@ function selectMood(mood) {
   journalEntry.placeholder = "Start writing here...";
   journalEntry.focus();
 
-  // Add gentle animation to prompt
+  
   promptBox.style.animation = 'none';
   setTimeout(() => {
     promptBox.style.animation = 'fadeInUp 0.6s ease-out';
@@ -151,7 +151,7 @@ function saveEntry() {
     return;
   }
 
-  // Create entry object
+  
   const entry = {
     id: Date.now(),
     date: new Date().toISOString(),
@@ -161,33 +161,33 @@ function saveEntry() {
     wordCount: entryText.split(/\s+/).filter(word => word.length > 0).length
   };
 
-  // Get existing entries from localStorage
+  
   let entries = JSON.parse(localStorage.getItem('journalEntries')) || [];
   
-  // Add new entry to the beginning of the array
+  
   entries.unshift(entry);
   
-  // Save back to localStorage
+  
   localStorage.setItem('journalEntries', JSON.stringify(entries));
 
-  // Show success message with enhanced animation
+  
   const saveBtn = document.querySelector('.save-btn');
   const originalHTML = saveBtn.innerHTML;
   saveBtn.innerHTML = '<span class="save-icon">✅</span> Entry Saved!';
-  saveBtn.style.background = 'linear-gradient(135deg, #4caf50, #45a049)';
+  saveBtn.style.background = 'linear-gradient(135deg, #d2cc1f, #d2cc1f)';
   
   setTimeout(() => {
     saveBtn.innerHTML = originalHTML;
-    saveBtn.style.background = 'linear-gradient(135deg, #8d674e, #6f4b36, #5a3a28)';
+    saveBtn.style.background = 'linear-gradient(135deg, #e7dd23, #e7dd23, #e7dd23)';
     
-    // Redirect to entries page
+    
     window.location.href = 'entries.html';
   }, 1500);
 
-  showNotification('Your entry has been saved! 🤎', 'success');
+  showNotification('Your entry has been saved!', 'success');
 }
 
-// Enhanced notification system
+
 function showNotification(message, type = "info") {
   const notification = document.createElement("div");
   notification.style.cssText = `
@@ -206,11 +206,11 @@ function showNotification(message, type = "info") {
   `;
 
   if (type === "success") {
-    notification.style.background = "linear-gradient(135deg, #4caf50, #45a049)";
+    notification.style.background = "linear-gradient(135deg, #d2cc1f, #d2cc1f)";
   } else if (type === "warning") {
-    notification.style.background = "linear-gradient(135deg, #ff9800, #f57c00)";
+    notification.style.background = "linear-gradient(135deg, #d2cc1f, #d2cc1f)";
   } else {
-    notification.style.background = "linear-gradient(135deg, #2196f3, #1976d2)";
+    notification.style.background = "linear-gradient(135deg, #d2cc1f, #d2cc1f)";
   }
 
   notification.textContent = message;
@@ -222,7 +222,7 @@ function showNotification(message, type = "info") {
   }, 3000);
 }
 
-// Add CSS animations
+
 const style = document.createElement('style');
 style.textContent = `
   @keyframes slideInRight {

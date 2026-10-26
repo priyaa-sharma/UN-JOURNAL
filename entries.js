@@ -54,7 +54,7 @@ function loadEntries() {
     `;
   }).join('');
 
-  // Add staggered animation to cards
+  
   const cards = entriesGrid.querySelectorAll('.entry-card');
   cards.forEach((card, index) => {
     card.style.opacity = '0';
@@ -106,7 +106,7 @@ function openModal(entryId) {
 
   modal.style.display = 'block';
   
-  // Close modal when clicking outside
+  
   modal.onclick = function(event) {
     if (event.target === modal) {
       closeModal();
@@ -138,7 +138,7 @@ function deleteEntry() {
   }
 }
 
-// Enhanced notification system
+
 function showNotification(message, type = "info") {
   const notification = document.createElement("div");
   notification.style.cssText = `
@@ -173,14 +173,14 @@ function showNotification(message, type = "info") {
   }, 3000);
 }
 
-// Close modal with Escape key
+
 document.addEventListener('keydown', function(event) {
   if (event.key === 'Escape') {
     closeModal();
   }
 });
 
-// Add CSS animations
+
 const style = document.createElement('style');
 style.textContent = `
   @keyframes slideInUp {
