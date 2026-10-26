@@ -1,4 +1,4 @@
-# UNJOURNAL
+# UN-JOURNAL
 
 Unjournal is a minimalist, interactive journaling space designed for quiet reflection and creative expression.
 
