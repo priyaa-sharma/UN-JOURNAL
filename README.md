@@ -1,86 +1,56 @@
-🩶 Daughter: Where Do We Go From Here?
+# UNJOURNAL
 
-A soft, interactive journaling space inspired by **Daughter's** debut album *If You Leave*.  
-This isn’t just a project — it’s an archive of all the things you never said out loud.  
-A tender interface where grief, memory, and hope exist side by side.
+Unjournal is a minimalist, interactive journaling space designed for quiet reflection and creative expression.
 
----
-
-## ✨ Project Overview
-
-**Daughter** is a front-end journal and self-reflection web app designed with an emotionally immersive aesthetic.  
-It includes:
-
-- A poetic **Landing Page (index)** to set the tone  
-- Mood-based **Journal Prompts** for guided introspection  
-- A gentle archive of **Entries** stored locally  
-- A collection of custom **Affirmations** themed by mood  
-- A soft, Pinterest-style **Vision Board** to dream beyond the pain
+Whether you need a space to log daily thoughts, reflect on your mood, or map out your visions, this application offers a calm and focused environment for your personal journey.
 
 ---
 
-## 🗂️ Pages
+## Project Overview
 
-| Page            | Description |
-|------------------|-------------|
-| `index.html`     | The front page. Starts soft, holds you gently. |
-| `journal.html`   | The main journaling space with mood prompts and soft UI. |
-| `affirmations.html` | Mood-linked affirmations when your heart needs a whisper. The affirmations updates everyday.|
-| `entries.html`   | A private archive of all saved journal entries via localStorage. |
-| `visions.html`   | A dreamy, blurred-board to visualize your longings, goals, or pure chaos. |
+**UnJournal** is a responsive front-end web application built for self-reflection with a clean, immersive visual design.
 
----
+Key features include:
 
-## 🎨 Features
-
-- 🎭 **Mood Selection**: Choose between `hopeful`, `melancholic`, `nostalgic`, `anxious`, or `freewrite`.
-- ✍️ **Dynamic Prompts**: Each mood unlocks its own library of journal prompts.
-- 🕊️ **Blurry Emotional Background**: Fullscreen blurred image inspired by Daughter's artwork.
-- 💌 **Local Entries Archive**: Entries saved using `localStorage` and can be revisited.
-- 🌱 **Affirmation Generator**: Gentle, custom affirmations built from your mood.
-- 📌 **Vision Board**: Upload, drag, arrange, and save your inspirations via `localStorage`.
-- 💅 **Soft Design Aesthetic**: Delicate serif fonts, soft browns, whites, and subtle blur-glow UI.
-
-
-
-## 🛠️ Tech Stack
-
-- `HTML5` + `CSS3` (with animations & blur effects)
-- `JavaScript` (Vanilla, no frameworks)
-- `localStorage` API
-
-  
----
-
-## 🎧 Inspiration
-
-> “If you leave, don’t leave me at all.”  
-> — *Youth*, Daughter
-
-This project was born from the kind of grief that doesn't scream — it lingers.  
-It holds space for you when nothing else does.
+- A minimalist Lemony **Landing Page** to set a peaceful tone
+- Mood-based **Journal Prompts** 
+- A secure, private archive of **Saved Entries** using local browser storage
+- Custom, mood-tailored **Daily Affirmations**
+- An interactive **Vision Board** to pin your ideas, goals, and visual inspirations
 
 ---
 
-## 🤍 Credits
+## Pages & Structure
 
-- ✨ Music & Mood: [Daughter – *If You Leave* (2013)](https://open.spotify.com/album/74ShfU6i2GfPyqwdc5uGl7?si=7YsepUjHT_KnunJyBmJmCw)
-- 🎨 Visual aesthetic based on Daughter's album photography
-- 🧠 Prompts, affirmations, and design by Priya Sharma
-- 💻 Coded in late nights and emotional clarity
-
+| Page | Description |
+| :--- | :--- |
+| `index.html` | The main landing page welcoming you to the space. |
+| `journal.html` | Interactive editor with customizable mood prompts and real-time writing space. |
+| `affirmations.html` | Daily refreshing affirmations categorized by how you feel. |
+| `entries.html` | Private archive displaying your past entries saved in `localStorage`. |
+| `visions.html` | A visual canvas to collect image links, goals, and mood boards. |
 
 ---
 
-## 🖤 Final Note
+## Core Features
 
-This journal doesn’t ask you to be okay.  
-It simply invites you to *be*.  
-To write.  
-To feel.  
-To return.
+- **Mood Filtering**: Select from categories like `hopeful`, `thoughtful`, `calm`, `anxious`, or open `freewrite`.
+- **Dynamic Prompts**: Selectable prompts tailored to your current state of mind.
+- **Atmospheric UI**: Soft gradients, calm blur effects, and high-readability typography.
+- **Local Data Persistence**: Your entries stay completely private on your device using `localStorage`.
+- **Daily Affirmation Generator**: Gentle reminders that refresh daily according to your selected mood.
+- **Interactive Vision Board**: Organize visual inspirations and goals smoothly.
 
-> **“You are still soft, even when you are breaking.”**
+---
 
-(I built this project entirely on StackBlitz to make things easier when I was starting out.)
-(https://stackblitz.com/~/github.com/priyaa-sharma/finaldaughter)
+## Tech Stack
+
+- **HTML5** & **CSS3** (Custom animations, glassmorphism, and responsive design)
+- **JavaScript (ES6+)** (DOM manipulation and application state handling)
+- **Storage**: Browser `localStorage` API
+
+---
+
+## Credits & License
+
+- **Design & Code**: Built by Priya Sharma 🤍
