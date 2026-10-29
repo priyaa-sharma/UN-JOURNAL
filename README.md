@@ -25,6 +25,7 @@ Key features include:
 | Page | Description |
 | :--- | :--- |
 | `index.html` | The main landing page welcoming you to the space. |
+| `login.html` | Sign-up and sign-in interface, including password reset and Google sign-in entry points. |
 | `journal.html` | Interactive editor with customizable mood prompts and real-time writing space. |
 | `affirmations.html` | Daily refreshing affirmations categorized by how you feel. |
 | `entries.html` | Private archive displaying your past entries saved in `localStorage`. |
@@ -37,7 +38,8 @@ Key features include:
 - **Mood Filtering**: Select from categories like `hopeful`, `thoughtful`, `calm`, `anxious`, or open `freewrite`.
 - **Dynamic Prompts**: Selectable prompts tailored to your current state of mind.
 - **Atmospheric UI**: Soft gradients, calm blur effects, and high-readability typography.
-- **Local Data Persistence**: Your entries stay completely private on your device using `localStorage`.
+- **Local Data Persistence**: Entries are stored in this browser's `localStorage`; they are not synced to Firebase or isolated by account.
+- **Account Authentication**: Firebase Authentication supports email/password registration with email confirmation, sign-in, sign-out, password reset, and Google sign-in. Journal pages require a verified Firebase session.
 - **Daily Affirmation Generator**: Gentle reminders that refresh daily according to your selected mood.
 - **Interactive Vision Board**: Organize visual inspirations and goals smoothly.
 

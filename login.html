@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#e9e1d3" />
+  <title>Sign in | UN-JOURNAL</title>
+  <link rel="stylesheet" href="login.css" />
+  <link rel="stylesheet" href="auth-ui.css" />
+</head>
+<body>
+  <div class="auth-background" aria-hidden="true"></div>
+  <a class="home-link" href="index.html">Back home</a>
+
+  <main class="auth-layout">
+    <section class="auth-card" aria-labelledby="auth-title">
+      <a class="brand" href="index.html">
+        <span>UN-JOURNAL</span>
+      </a>
+
+      <p class="eyebrow">A little space for you</p>
+      <h1 id="auth-title">Create your account</h1>
+
+      <form id="auth-form">
+        <div class="field" id="name-field">
+          <label for="name">Name</label>
+          <input id="name" name="name" type="text" autocomplete="name" placeholder="Your name" required />
+        </div>
+
+        <div class="field">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" autocomplete="email" placeholder="you@example.com" required />
+        </div>
+
+        <div class="field">
+          <div class="label-row">
+            <label for="password">Password</label>
+            <button class="text-button forgot-link" id="forgot-password" type="button" hidden>Forgot password?</button>
+          </div>
+          <input id="password" name="password" type="password" autocomplete="new-password" placeholder="At least 8 characters" minlength="8" required />
+        </div>
+
+        <div class="field" id="confirm-field">
+          <label for="confirm-password">Confirm password</label>
+          <input id="confirm-password" name="confirm-password" type="password" autocomplete="new-password" placeholder="Enter your password again" minlength="8" required />
+        </div>
+
+        <button class="primary-button" id="submit-button" type="submit">Create account</button>
+      </form>
+
+      <div class="divider"><span>or continue with</span></div>
+
+      <button class="google-button" id="google-button" type="button">
+        <svg aria-hidden="true" viewBox="0 0 48 48" width="19" height="19">
+          <path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5Z" transform="translate(0 5)" />
+          <path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.74 7.18l7.28 5.65c4.25-3.92 6.7-9.7 6.7-17.3Z" />
+          <path fill="#FBBC05" d="M10.53 28.59a14.4 14.4 0 0 1 0-9.18l-7.98-6.19a23.9 23.9 0 0 0 0 21.56l7.98-6.19Z" transform="translate(0 5)" />
+          <path fill="#34A853" d="M24 48c6.47 0 11.9-2.13 15.86-5.8l-7.28-5.65c-2.02 1.35-4.6 2.15-8.58 2.15-6.26 0-11.57-4.22-13.46-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48Z" transform="translate(0 -5)" />
+        </svg>
+        <span>Continue with Google</span>
+      </button>
+
+      <p class="form-message" id="form-message" role="status" aria-live="polite"></p>
+
+      <p class="switch-mode">
+        <span id="switch-prompt">Already have an account?</span>
+        <button class="text-button" id="switch-mode" type="button">Sign in</button>
+      </p>
+      <div id="account-session" hidden>
+        <span id="account-label"></span>
+        <button class="text-button" data-auth-signout type="button">Sign out</button>
+      </div>
+      <p class="auth-status" data-auth-status role="status" aria-live="polite" hidden></p>
+    </section>
+  </main>
+
+  <script type="module" src="login.js"></script>
+  <script type="module" src="auth-ui.js"></script>
+</body>
+</html>

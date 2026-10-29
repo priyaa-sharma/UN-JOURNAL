@@ -5,8 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Where Do We Go From Here?</title>
   <link rel="stylesheet" href="journal.css" />
+  <link rel="stylesheet" href="auth-ui.css" />
 </head>
-<body>
+<body class="auth-pending">
   <div class="background"></div>
 
   <div class="menu-toggle" onclick="toggleMenu()">&#9776;</div>
@@ -16,6 +17,9 @@
     <a href="entries.html">My Entries</a>
     <a href="affirmations.html">Affirmations</a>
     <a href="vision.html">Mood Board</a>
+    <a data-auth-signin href="login.html">Sign in</a>
+    <button class="auth-signout" data-auth-signout type="button" hidden>Sign out</button>
+    <p class="auth-status" data-auth-status role="status" aria-live="polite" hidden></p>
   </div>
 
   <div class="journal-container">
@@ -47,5 +51,7 @@
   </div>
 
   <script src="journal.js"></script>
+  <script type="module" src="auth-ui.js"></script>
+  <script type="module" src="protect-page.js"></script>
 </body>
 </html>

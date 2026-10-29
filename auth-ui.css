@@ -1,0 +1,56 @@
+[hidden],
+body.auth-pending {
+  display: none !important;
+}
+
+[data-auth-signin][hidden],
+[data-auth-status][hidden] {
+  display: none;
+}
+
+.sidebar .auth-signout[hidden],
+#account-session[hidden] {
+  display: none;
+}
+
+.sidebar .auth-signout {
+  display: block;
+  width: 100%;
+  padding: 16px 28px;
+  border: 0;
+  border-left: 4px solid transparent;
+  background: transparent;
+  color: #6b650b;
+  cursor: pointer;
+  font: 500 1.1rem "Roboto Mono", monospace;
+  letter-spacing: 0.5px;
+  text-align: left;
+  transition: all 0.3s ease;
+}
+
+.sidebar .auth-signout:hover {
+  transform: translateX(5px);
+  border-left-color: #8d674e;
+  background-color: rgba(212, 177, 140, 0.8);
+}
+
+.auth-status {
+  margin: 8px 20px;
+  color: #6b650b;
+  font: 400 0.8rem "Roboto Mono", monospace;
+}
+
+#account-session {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin: 16px 0 0;
+}
+
+#account-label {
+  overflow: hidden;
+  color: #777064;
+  font-size: 0.9rem;
+  text-overflow: ellipsis;
+}

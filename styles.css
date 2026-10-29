@@ -134,7 +134,6 @@ body, html {
   transform: translateY(-1px) scale(1.02);
 }
 
-
 .quote {
   font-style: italic;
   font-size: clamp(0.9rem, 1.5vw, 1.1rem);
